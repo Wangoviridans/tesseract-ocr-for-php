@@ -43,6 +43,17 @@
     $tesseract->setImage('images/some-words.jpg');
     echo $tesseract->recognize();
 
+    or
+
+    <?php
+    require_once '/path/to/src/TesseractOCR.php';
+    //or require_once 'vendor/autoload.php' if you are using composer
+
+    $tesseract = new TesseractOCR(array(
+        'file.input' => 'images/some-words.jpg'
+    ));
+    echo $tesseract->recognize();
+
 ### Defining language
 
 Tesseract has training data for several languages, which certainly improve
@@ -56,6 +67,18 @@ the accuracy of the recognition.
     $tesseract->setLanguage('deu'); //same 3-letters code as tesseract training data packages
     echo $tesseract->recognize();
 
+    or
+
+    <?php
+    require_once '/path/to/src/TesseractOCR.php';
+    //or require_once 'vendor/autoload.php' if you are using composer
+
+    $tesseract = new TesseractOCR(array(
+        'file.input' => 'images/sind-sie-deutsch.jpg',
+        'language' => 'deu' //same 3-letters code as tesseract training data packages
+    ));
+    echo $tesseract->recognize();
+
 ### Inducing recognition
 
   Sometimes tesseract misunderstand some chars, such as:
@@ -65,7 +88,7 @@ the accuracy of the recognition.
     j - ,
     etc ...
 
-  But you can improve recognition accuracy by specifing what kind of chars
+  But you can improve recognition accuracy by specifying what kind of chars
   you're sending, for example:
 
     <?php
@@ -97,4 +120,12 @@ the accuracy of the recognition.
     $tesseract = new TesseractOCR();
     $tesseract->setImage('my-image.jpg')
               ->setTempDir('./my-temp-dir');
+
+    or
+
+    <?php
+    $tesseract = new TesseractOCR(array(
+        'file.input' => 'my-image.jpg',
+        'tempDir' => './my-temp-dir'
+    ));
 
