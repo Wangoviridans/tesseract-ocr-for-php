@@ -77,6 +77,7 @@ the accuracy of the recognition.
     $tesseract = new TesseractOCR();
     $tesseract->setImage('my-image.jpg')
               ->setWhitelist(range('A','Z'), range(0,9), '_-@.'); //you can pass as many ranges as you need
+    echo $tesseract->recognize();
 
   You can even do *cool* stuff like this one:
 
