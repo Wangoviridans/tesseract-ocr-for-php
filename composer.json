@@ -1,5 +1,5 @@
 {
-	"name": "wangoviridans/tesseract-ocr-for-php",
+	"name": "wangoviridans/tesseract_ocr",
 	"type": "library",
 	"version": "0.0.1",
 	"description": "A wrapper to work with TesseractOCR inside your PHP scripts",
