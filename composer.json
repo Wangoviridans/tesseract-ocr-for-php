@@ -16,7 +16,7 @@
 		"adambrett/shell-wrapper": "0.4.*"
 	},
 	"require-dev": {
-		"phpunit": "3.4.*"
+		"phpunit/phpunit": "3.4.*"
 	},
 	"autoload": {
 		"psr-4": {
