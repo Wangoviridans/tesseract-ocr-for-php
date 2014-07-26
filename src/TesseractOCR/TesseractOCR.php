@@ -334,16 +334,16 @@ class TesseractOCR {
 	protected function buildTesseractCommand() {
 		$command = static::createCommand($this->getShellCommand());
 
-		$command->addParam($this->getImage());
-		$command->addParam($this->getOutputFile());
+		$command->addSubCommand($this->getImage());
+		$command->addSubCommand($this->getOutputFile());
 
-		$command->addArgument('l', $this->getLanguage());
-		$command->addArgument('psm', $this->getPsm());
+		$command->addFlag('l', $this->getLanguage());
+		$command->addFlag('psm', $this->getPsm());
 
-		$command->addParam($this->getBatch());
+		$command->addParam('nobatch');
 
-		if ($this->config->hasOption('configFile')) {
-			$command->addParam($this->config->getOption('configFile'));
+		if ($this->configFile) {
+			$command->addParam($this->configFile);
 		} else if ($this->config->hasOption('whiteList')) {
 			$command->addParam($this->getWhiteList());
 		}
