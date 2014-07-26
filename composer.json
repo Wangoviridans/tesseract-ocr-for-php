@@ -13,6 +13,7 @@
 		}
 	],
 	"require": {
+		"wangoviridans/config": "dev-master",
 		"adambrett/shell-wrapper": "0.4.*"
 	},
 	"require-dev": {

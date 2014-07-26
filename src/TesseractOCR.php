@@ -2,6 +2,7 @@
 
 namespace Wangoviridans\TesseractOCR;
 
+use Wangoviridans\Config\Config;
 use AdamBrett\ShellWrapper\Command\Builder as CommandBuilder;
 
 class TesseractOCR {
