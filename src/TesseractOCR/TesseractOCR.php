@@ -271,7 +271,7 @@ class TesseractOCR {
 	 * @return mixed
 	 */
 	public function getImage() {
-		return $this->config->getOption('imageFile');
+		return $this->config->getOption('file.input');
 	}
 
 
