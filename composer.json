@@ -21,7 +21,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Wangoviridans\\TesseractOCR\\": "src"
+			"Wangoviridans\\TesseractOCR\\": "src/TesseractOCR/"
 		}
 	}
 }
