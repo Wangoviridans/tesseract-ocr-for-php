@@ -3,7 +3,7 @@
   A wrapper to work with TesseractOCR inside your PHP scripts.
   Based on https://github.com/wangoviridans/tesseract-ocr-for-php
 
-## Instalation
+## Installation
 
   Via [composer](http://getcomposer.org/)
   (https://packagist.org/packages/wangoviridans/tesseract_ocr)
